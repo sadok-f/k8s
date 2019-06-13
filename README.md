@@ -60,7 +60,6 @@ Verification:
             --image-family ubuntu-1604-lts \
             --image-project ubuntu-os-cloud \
             --machine-type n1-standard-2 \
-            --metadata pod-cidr=10.200.0.0/16 \
             --private-network-ip 10.240.0.2$i \
             --scopes compute-rw,storage-ro,service-management,service-control,logging-write,monitoring \
             --subnet kubernetes \
