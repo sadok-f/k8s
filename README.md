@@ -52,7 +52,7 @@ Verification:
     end
 
 ### Kubernetes Workers
-    for i in 0
+    for i in 1
         gcloud compute instances create worker-$i \
             --async \
             --boot-disk-size 200GB \
@@ -112,7 +112,7 @@ Verification:
     -pubin -outform der 2>/dev/null | openssl dgst \
     -sha256 -hex | sed 's/^.* //'
 
-### On the Worker-0 Instance:
+### On the Worker-0 and Worker-1 Instances:
     sudo -i
     apt-get update && apt-get upgrade -y
     apt-get install -y docker.io ; \
